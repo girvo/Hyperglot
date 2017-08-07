@@ -1,6 +1,7 @@
 .DS_Store
-
+.buildcache/*
+app/*
 bower_modules
 node_modules
-
 parser.js
+!.gitkeep

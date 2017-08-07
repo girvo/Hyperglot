@@ -17,6 +17,15 @@ function navigateTo(viewName) {
 	window.location.hash = viewName;
 }
 
+const gui = require('nw.gui')
+const win = gui.Window.get()
+
+$('#js--openDevTools').on('click', () => {
+	if (! win.isDevToolsOpen) {
+		win.showDevTools()
+	}
+})
+
 $(document).on('ready', function() {
 	navigateTo('DecoderView');	// Last View Selected || 'DocsHGView'
 })
